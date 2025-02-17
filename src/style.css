@@ -1,0 +1,32 @@
+.container{
+    max-width: 1120px;
+    margin: 0 auto;
+}
+*{
+    
+  
+}
+
+.navbar_after::after{
+    content: "";
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    top:-10px;
+    left: 0;
+    background: #0B4C61;
+    border-radius: 5px;
+    opacity: 0;
+    transition: .5s;
+}
+.navbar_after:hover::after{
+    opacity: 1;
+}
+
+main {
+    background-image: url('/Images/bg.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:fixed;
+}
