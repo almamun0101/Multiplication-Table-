@@ -2,25 +2,29 @@ let numberOne = document.getElementById("number1")
 let output = document.getElementById("output")
 let button = document.getElementById("submit")
 let h = document.getElementById("heading")
-let result;
 
-button.addEventListener('click', function () {
-  // let value = numberOne.value
-  let tr = document.createElement("TR")
-  let td = document.createElement("TD")
-  let text = document.createTextNode("Mamun")
+numberOne.addEventListener("keydown", function (event) {
+ if(event.key=="Enter"){
+  multiple()
+ }
 
-  
-  td.innerHTML= text
-  tr.appendChild(td)
-  output.appendChild(tr)
-
-  // console.log("Mamun")
-  output.innerHTML =tr;
+});
 
 
+button.addEventListener('click', multiple)
 
-  for (let i = 1; i <= 10; i++) {
+function multiple() {
+  let value = numberOne.value;
+  if (!value) {
+    alert("Please Input A Number For Multiple")
+  } else {
+    output.innerHTML = ""
+    for (let i = 1; i <= 10; i++) {
+      let li = document.createElement("li")
+      let result = `${value} x ${i} = ${value*i}`
+      li.innerHTML = result
+      output.appendChild(li)
+    }
   }
 
-})
+}
