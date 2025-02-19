@@ -1,16 +1,26 @@
-let numberOne = document.getElementById("1")
+let numberOne = document.getElementById("number1")
 let output = document.getElementById("output")
 let button = document.getElementById("submit")
-const li = document.createElement("li")
+let h = document.getElementById("heading")
 let result;
 
-button.addEventListener('click',function (){
+button.addEventListener('click', function () {
+  // let value = numberOne.value
+  let tr = document.createElement("TR")
+  let td = document.createElement("TD")
+  let text = document.createTextNode("Mamun")
 
-  for (let i = 1; i <=10; i++) {
-    // const element = array[i];
-    output.innerHTML=i;
-    console.log(i) 
-    
+  
+  td.innerHTML= text
+  tr.appendChild(td)
+  output.appendChild(tr)
+
+  // console.log("Mamun")
+  output.innerHTML =tr;
+
+
+
+  for (let i = 1; i <= 10; i++) {
   }
 
 })
