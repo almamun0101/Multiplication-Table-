@@ -9,17 +9,14 @@ numberOne.addEventListener("keydown", function (event) {
  }
 
 });
-
-
 button.addEventListener('click', multiple)
-
 function multiple() {
   let value = numberOne.value;
   if (!value) {
     alert("Please Input A Number For Multiple")
   } else {
     output.innerHTML = ""
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <=10; i++) {
       let li = document.createElement("li")
       let result = `${value} x ${i} = ${value*i}`
       li.innerHTML = result
