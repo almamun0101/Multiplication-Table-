@@ -10,6 +10,7 @@ numberOne.addEventListener("keydown", function (event) {
 
 });
 button.addEventListener('click', multiple)
+
 function multiple() {
   let value = numberOne.value;
   if (!value) {
